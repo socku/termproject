@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"></link>
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="css/style.css" ></link> 
+    </h:head>
+    <h:body>
+        <div class="container">
+
+            <h:form id="register" class="form-signup">
+                <h2 class="form-signup-heading">Term Project</h2>
+                <h:messages style="color: red;"/>
+                
+                <div class="form-group">
+                    <h:outputLabel value="First Name"/>
+                    <h:inputText id="firstname" class="form-control" value="#{Controller.firstname}" required="true" requiredMessage="Please enter Firstname" p:placeholder="firstname" styleClass="form-control" />
+                </div>
+                <div class="form-group">
+                    <h:outputLabel value="Lastname"/>
+                    <h:inputText id="lastname" class="form-control" value="#{Controller.lastname}" required="true" requiredMessage="Please enter Lastname" p:placeholder="Lastname" styleClass="form-control" />
+                </div>
+                <div class="form-group">
+                    <h:outputLabel value="Address"/>
+                    <h:inputText id="address" class="form-control" value="#{Controller.address}" required="true" requiredMessage="Please enter Address" p:placeholder="Address" styleClass="form-control" />
+                </div>
+                <div class="form-group">
+                    <h:outputLabel value="Phone Number"/>
+                    <h:inputText id="phonenumber" class="form-control" value="#{Controller.phonenumber}" required="true" requiredMessage="Please enter Phonenumber" p:placeholder="Username" styleClass="form-control" />
+                </div>
+                <div class="form-group">
+                    <h:outputLabel value="Email"/>
+                    <h:inputText id="email" class="form-control" value="#{Controller.email}" required="true" requiredMessage="Please enter Email" p:placeholder="Email" styleClass="form-control" />
+                </div>
+                <div class="form-group">
+                    <h:outputLabel value="Username"/>
+                    <h:inputText id="username" class="form-control" value="#{Controller.username}" required="true" requiredMessage="Please enter Username" p:placeholder="Username" styleClass="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <h:outputLabel value="Password"/>
+                    <h:inputSecret id="password" value="#{Controller.password}" required="true" requiredMessage="Please enter Password" p:placeholder="Password" styleClass="form-control" />
+                </div>
+
+                <div class="form-group text-center">
+                    <!--<h:link value="Register Now" outcome="register" /><br />-->
+                    <h:commandButton value="Register" action="#{Controller.RegisterController}" styleClass="btn btn-success btn-login-submit" />
+                </div>
+                <h:outputLabel styleClass="text-align:center;" value="Please ensure database is loaded."/>
+            </h:form>
+			
+        </div> <!-- /container -->
+
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    </h:body>
+</html>
